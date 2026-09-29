@@ -1,5 +1,4 @@
-
-export const Connection = (fn) => {
+const ascyHandaler= (fn) => {
     (req,res,next)=>{
         Promise.resolve(()=>
             fn(req,res,next)

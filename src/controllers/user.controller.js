@@ -1,6 +1,6 @@
-import { AsynHandaller } from "../utils/AsynHandaller.js"
+import { ascyHandaler } from "../utils/AsynHandaller.js"
 
-const registration = AsynHandaller( async (req,res) =>{
+const registration = ascyHandaler (async (req,res) =>{
     res.status(200).json({
         massage : "ok",
     })

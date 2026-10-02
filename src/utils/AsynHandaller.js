@@ -7,3 +7,6 @@ const ascyHandaler= (fn) => {
             })
     }
 }
+
+export { ascyHandaler };
+

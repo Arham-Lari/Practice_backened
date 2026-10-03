@@ -1,6 +1,7 @@
 {
   "name": "practice_backened",
   "version": "1.0.0",
+  "type" : "module",
   "description": "it is backened built to learn about the backened programming ",
   "main": "index.js",
   "scripts": {

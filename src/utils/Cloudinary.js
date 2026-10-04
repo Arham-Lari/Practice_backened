@@ -2,9 +2,9 @@ import {v2 as cloudinary} from "cloudinary"
 import fs from "fs"
 
 cloudinary.config({
-    cloudinary_name:process.env.CLOUDNAR_NAME,
-    api_key:process.env.CLOUDNAR_API_KEY,
-    api_secret:process.env.CLOUDNAR_SECREATE,
+    cloud_name:process.env.CLOUDNARY_NAME,
+    api_key:process.env.CLOUDNARY_API_KEY,
+    api_secret:process.env.CLOUDNARY_SECREATE,
 });
 
 const uploadCloudnary = async(localfilePath) =>{
@@ -17,7 +17,7 @@ const uploadCloudnary = async(localfilePath) =>{
         });
 
         //cloudnary upload sucessesfully
-        console.log("file uploaded sucessesfully",response.url);
+        fs.unlinkSync(localfilePath)
         return response;
     }catch{
         fs.unlinkSync(localfilePath)//remonve the locally saved file in case of failure

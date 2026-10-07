@@ -90,13 +90,13 @@ const registration = ascyHandaler(async (req, res) => {
     };
 
     return res.status(201).json(
-        new ApiResponse(200, created, "userRegistered sucessfully")
+        new ApiResponse(200, created, "ACCESS_TOKEN_SECRETuserRegistered sucessfully")
     )
 
 });
 
 
-const loginUser = AsynHandaller(async (req, res) => {
+const loginUser = ascyHandaler(async (req, res) => {
     //req body --> data
     //username or email
     //find the user
@@ -154,7 +154,7 @@ const loginUser = AsynHandaller(async (req, res) => {
                 "user logged in",
             )
         )
-
 })
 
-export { registration, loginUser }
+
+export { registration, loginUser, logOut }
